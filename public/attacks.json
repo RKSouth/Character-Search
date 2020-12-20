@@ -1,0 +1,467 @@
+[
+    {
+        "id": 1,
+        "name": "BAT DANCE",
+        "CharacterId": "1",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "Bat Mobile",
+        "CharacterId": "1",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "Brooding and Smouldering",
+        "CharacterId": "1",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "Daddy Issues",
+        "CharacterId": "1",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Ask Alfred",
+        "CharacterId": "1",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 1,
+        "name": "Drop Leaves",
+        "CharacterId": "2",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "Leak Water",
+        "CharacterId": "2",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "Make Clones",
+        "CharacterId": "2",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "Shrivel",
+        "CharacterId": "2",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Growth Spurt",
+        "CharacterId": "2",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 1,
+        "name": "Dunks ON YOU",
+        "CharacterId": "3",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "Dad Jokes",
+        "CharacterId": "3",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "Tan Suit",
+        "CharacterId": "3",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "Swagger",
+        "CharacterId": "3",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Ask Michelle",
+        "CharacterId": "3",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 1,
+        "name": "Sneaky Sneaky",
+        "CharacterId": "4",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "Surprise! Behind You",
+        "CharacterId": "4",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "Nunchucks",
+        "CharacterId": "4",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "Karate Chop",
+        "CharacterId": "4",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Roundhouse Kick",
+        "CharacterId": "4",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 1,
+        "name": "Break Check",
+        "CharacterId": "5",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "Cut Off",
+        "CharacterId": "5",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "Surprise Turn",
+        "CharacterId": "5",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "Change 3 lanes at once",
+        "CharacterId": "5",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Change Lanes into You",
+        "CharacterId": "5",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 1,
+        "name": "Butt Cramps",
+        "CharacterId": "6",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "Toe Stub",
+        "CharacterId": "6",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "Dehydration",
+        "CharacterId": "6",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "Wack your pet with the Pedals",
+        "CharacterId": "6",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Fall Off",
+        "CharacterId": "6",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 1,
+        "name": "Ketchup/Mustard on Your Shirt",
+        "CharacterId": "7",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "Too Good to Resist",
+        "CharacterId": "7",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "Not enough bun son",
+        "CharacterId": "7",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "Can't Have Just One",
+        "CharacterId": "7",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Food Poisoning",
+        "CharacterId": "7",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 1,
+        "name": "Blaze Up",
+        "CharacterId": "8",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "Sorry Canada",
+        "CharacterId": "8",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "Weird Laughing",
+        "CharacterId": "8",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "Red Eyed Snack Attack",
+        "CharacterId": "8",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Bagged Milk",
+        "CharacterId": "8",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 1,
+        "name": "Never Going to Give You Up",
+        "CharacterId": "9",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "Never Going to Let You Down",
+        "CharacterId": "9",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "Never Going to Run Around and Desert You",
+        "CharacterId": "9",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "Never Going to Make Cry",
+        "CharacterId": "9",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Never Going to Say Goodbye",
+        "CharacterId": "9",
+        "createdAt": "",
+        "updatedAt":""
+    }
+    ,
+  
+    {
+        "id": 1,
+        "name": "HYPNOTIZE",
+        "CharacterId": "11",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 2,
+        "name": "STUPIFY",
+        "CharacterId": "11",
+        "createdAt": "Daddy Issues",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "MESMERIZE",
+        "CharacterId": "11",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "CONFOUND",
+        "CharacterId": "11",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "BEWILDER",
+        "CharacterId": "11",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 1,
+        "name": "DODGE THE BALL!",
+        "CharacterId": "12",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "RUN LAPS!",
+        "CharacterId": "12",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "CLIMB THE ROPE",
+        "CharacterId": "12",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "SEX ED",
+        "CharacterId": "12",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Being Creepy",
+        "CharacterId": "12",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 1,
+        "name": "lo-fi beats",
+        "CharacterId": "10",
+        "createdAt": "",
+        "updatedAt":""
+    },
+    {
+        "id": 2,
+        "name": "No More Lowes!",
+        "CharacterId": "10",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 3,
+        "name": "Resistance Bands",
+        "CharacterId": "10",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 4,
+        "name": "Fitness!",
+        "CharacterId": "10",
+        "createdAt": "",
+        "updatedAt":""
+    },
+  
+    {
+        "id": 5,
+        "name": "Bad Pancake",
+        "CharacterId": "10",
+        "createdAt": "",
+        "updatedAt":""
+    }
+
+
+  
+   
+]

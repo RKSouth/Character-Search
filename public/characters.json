@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "name": "Batman",
+        "attack": "1",
+        "image": "./Images-char/batperson.png"
+    },
+    {
+        "id": 2,
+        "name": "House Plant",
+        "attack": "2",
+        "image": "./Images-char/houseplant.png"
+    },
+    {
+        "id": 3,
+        "name": "Barack Obama",
+        "attack": "3",
+        "image": "./Images-char/obama.png"
+    },
+    {
+        "id": 4,
+        "name": "Ninja",
+        "attack": "4",
+        "image": "./Images-char/ninja.png"
+    },
+    {
+        "id": 5,
+        "name": "LA DRIVER",
+        "attack": "5",
+        "image": "./Images-char/LADrivers.png"
+    },
+    {
+        "id": 6,
+        "name": "Stationary Exercise Bike",
+        "attack": "6",
+        "image": "./Images-char/statbike.png"
+    },
+    {
+        "id": 7,
+        "name": "Hot Dog",
+        "attack": "7",
+        "image": "./Images-char/hotdog.png"
+    },
+    {
+        "id": 8,
+        "name": "Seth Rogan (and friend)",
+        "attack": "8",
+        "image": "./Images-char/SethandJames.png"
+    },
+    {
+        "id": 9,
+        "name": "Rick Astley",
+        "attack": "9",
+        "image": "./Images-char/rickya.png"
+    },
+    {
+        "id": 10,
+        "name": "Wess",
+        "attack": "10",
+        "image": "./Images-char/Wess.png"
+    },
+    {
+        "id": 11,
+        "name": "Hypno Toad",
+        "attack": "11",
+        "image": "./Images-char/hypnotoad.png"
+    },
+    {
+        "id": 12,
+        "name": "PE Teacher",
+        "attack": "12",
+        "image": "./Images-char/PETeacher.png"
+    }
+       
+]
