@@ -1,2 +1,2 @@
-# Character-Search
-A simple fullstack application that allows you to search characters
+# CharacterSearch
+A simple full stack app that searches for characters and displays them
