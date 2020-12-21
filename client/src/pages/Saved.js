@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Jumbotron from "../components/Jumbotron";
-import API from "../utils/booksAPI";
+import API from "../utils/API";
 import SavedBooks from "../components/SavedBooks";
 
 // Saved page displaying the books that are in the database
@@ -11,18 +11,18 @@ function Saved() {
  
   
     // delete books by id
-    const deleteBooks = (id) => {
+    const deleteCharacters = (id) => {
         // console.log(books);
         // console.log("working");
         // console.log(id);
-        API.deleteBook(id)
+        API.deleteCharacter(id)
             .then((res) => {
                 // console.log(res);
                 // then update books
-                API.getApiBooks()
+                API.getCharacters()
                     .then(response => {
                         // console.log("delete grab response: ", response);
-                        setBooks(response.data)
+                        setCharacters(response.data)
                     })
             })
 
@@ -30,14 +30,14 @@ function Saved() {
 
     // grabbing the books from the database on initial render
     useEffect(() => {
-        API.getApiBooks()
-            .then(res => setBooks(res.data))
+        API.getCharacters()
+            .then(res => setCharacters(res.data))
         // console.log(books)
     }, []);
 
     // re-render page when books is updated
     useEffect(() => {
-    }, [books]);
+    }, [characters]);
 
  
 
@@ -48,8 +48,8 @@ function Saved() {
                 <Jumbotron />
      
                 <SavedBooks
-                    books={books}
-                    deleteBooks={deleteBooks} style={{ height: 650, clear: "both", paddingTop: 120, textAlign: "center", marginTop: 108 }}/>
+                    characters={characters}
+                    deleteCharacters={deleteCharacters} style={{ height: 650, clear: "both", paddingTop: 120, textAlign: "center", marginTop: 108 }}/>
                
             </React.Fragment>
         </div>

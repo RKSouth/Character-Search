@@ -6,19 +6,15 @@ export function createForm(props) {
    return( <form>
                 <Input
                   onChange={props.handleInputChange}
-                  name="title"
-                  placeholder="Title (required)"
+                  name="name"
+                  placeholder="name"
                 />
                 <Input
                   onChange={props.handleInputChange}
-                  name="author"
-                  placeholder="Author (required)"
+                  name="attack"
+                  placeholder="attack"
                 />
-                <TextArea
-                  onChange={props.handleInputChange}
-                  name="synopsis"
-                  placeholder="Synopsis (Optional)"
-                />
+             
                 <FormBtn
                   // disabled={!(formObject.author && formObject.title)}
                   onClick={props.handleFormSubmit}

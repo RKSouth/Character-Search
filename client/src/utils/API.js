@@ -27,14 +27,17 @@ const API = {
         return axios.post("/api/characters", data);
     },
     // delete the book by id when the user decides to remove from the saved page
-    deleteBook: function(id) {
-        return axios.delete("/api/books/" + id);
-    },
+    // deleteBook: function(id) {
+    //     return axios.delete("/api/books/" + id);
+    // },
     deleteCharacters: function(id) {
         return axios.delete("/api/characters/" + id);
     },
     // find a book by id
     findBook: function(id) {
+        return axios.get("/api/search");
+    },
+    findCharacter: function(id) {
         return axios.get("/api/search");
     },
     saveChar: function(characterData) {
