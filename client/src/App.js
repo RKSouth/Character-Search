@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 import './App.css';
-import Jumbotron from "./components/Jumbotron";
-import Navbar from "./components/Navbar"; 
+import Jumbotron from "./components/Jumbotron/index";
+import Navbar from "./components/Navbar/index"; 
 import Results from "./components/Results"
 // setting up the routes to the different pages in the application
 function App() {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import Jumbotron from "../components/Jumbotron";
+import Navbar from "../components/Navbar/index";
+import Jumbotron from "../components/Jumbotron/index";
 import API from "../utils/API";
 import SavedCharacters from "../components/SavedCharacters";
 
