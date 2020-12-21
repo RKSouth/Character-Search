@@ -4,22 +4,13 @@ const API = {
     getCharacters: function() {
         return axios.get('/characters.json')
     },
-    // axios call to grab the books from the google books API and the search input of the user
-    getBooks: function(book) {
-        return axios.get('https://www.googleapis.com/books/v1/volumes?q=' + book)
-    },
+
     // grab the books from the database that was saved by the user
     getApiChars: function() {
         return axios.get("/api/characters");
     },
     // grab the books from the database that was saved by the user
-    getApiBooks: function() {
-        return axios.get("/api/books");
-    },
-      // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
-  },
+ 
   getCharacter: function(id) {
     return axios.get("/api/characters/" + id);
   },

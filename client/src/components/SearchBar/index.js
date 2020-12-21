@@ -4,7 +4,7 @@ import React from "react";
 export function SearchBar(props) {
   return (
     <div>
-    <h1>Search at the Book Nook!</h1>
+    <h1>Search For a Character!</h1>
    <div className="card-center">
    <h3>Begin your search!</h3>
    <div>

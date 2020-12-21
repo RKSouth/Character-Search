@@ -15,29 +15,29 @@ const reducer = (state, action) => {
   case SET_CURRENT_POST:
     return {
       ...state,
-      currentPost: action.book,
+      currentPost: action.character,
       loading: false
     };
 
   case UPDATE_POSTS:
     return {
       ...state,
-      books: [...action.books],
+      characters: [...action.characters],
       loading: false
     };
 
   case ADD_POST:
     return {
       ...state,
-      books: [action.book, ...state.books],
+      characters: [action.character, ...state.characters],
       loading: false
     };
 
   case REMOVE_POST:
     return {
       ...state,
-      books: state.books.filter((book) => {
-        return book._id !== action._id; 
+      characters: state.characters.filter((character) => {
+        return character._id !== action._id; 
       })
     };
 
@@ -56,8 +56,8 @@ const reducer = (state, action) => {
 
 const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
-    books: [],
-    currentBook: {
+    characters: [],
+    currentcharacter: {
       _id: 0,
       title: "",
       description: "",
