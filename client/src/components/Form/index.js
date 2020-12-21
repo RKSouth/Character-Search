@@ -19,7 +19,7 @@ export function createForm(props) {
                   // disabled={!(formObject.author && formObject.title)}
                   onClick={props.handleFormSubmit}
                 >
-                  Submit Book
+                  Submit Character
                 </FormBtn>
               </form>
    )

@@ -9,6 +9,10 @@ const API = {
         return axios.get('https://www.googleapis.com/books/v1/volumes?q=' + book)
     },
     // grab the books from the database that was saved by the user
+    getApiChars: function() {
+        return axios.get("/api/characters");
+    },
+    // grab the books from the database that was saved by the user
     getApiBooks: function() {
         return axios.get("/api/books");
     },
@@ -20,9 +24,7 @@ const API = {
     return axios.get("/api/characters/" + id);
   },
     // add a book to the database when the user clicks save book
-    addBook: function(data) {
-        return axios.post("/api/books", data);
-    },   // add a book to the database when the user clicks save book
+
     addCharacter: function(data) {
         return axios.post("/api/characters", data);
     },
@@ -30,7 +32,8 @@ const API = {
     // deleteBook: function(id) {
     //     return axios.delete("/api/books/" + id);
     // },
-    deleteCharacters: function(id) {
+
+    deleteCharacter: function(id) {
         return axios.delete("/api/characters/" + id);
     },
     // find a book by id

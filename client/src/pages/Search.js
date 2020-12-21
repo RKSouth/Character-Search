@@ -68,43 +68,7 @@ function Search() {
         setIds(temps);
     };
 
-    // function that allows books to be saved qne displaying the modal
-    // const saveBook = (book) => {
-    //     // console.log("savebook: ", book);
-    //     var image;
-    //     if (book.volumeInfo.imageLinks === undefined) {
-    //         // image = "./googlebookslogo.png"
-    //     } else {
-    //         image = book.volumeInfo.imageLinks.thumbnail
-    //     };
 
-    //     // console.log("book id: ", book.id);
-    //     if (!ids.includes(book.id)) {
-    //         setIds([...ids, book.id]);
-    //         setText(book.volumeInfo.title + " was saved!");
-    //     } else {
-    //         setText(book.volumeInfo.title + " is already saved!");
-    //     };
-
-    //     // setting an object with the data we grabbed from the axios call and passing in the data to be saved into the database
-    //     const data = {
-    //         title: book.volumeInfo.title,
-    //         author: book.volumeInfo.authors,
-    //         description: book.volumeInfo.description,
-    //         image: image,
-    //         link: book.volumeInfo.infoLink,
-    //         id: book.id
-    //     };
-
-    //     API.addBook(data).then(res => {
-    //         console.log("saved", res)
-
-
-    //     }).then(err => {
-    //         console.log("error", err);
-
-    //     });
-    // };
 
      // function that allows books to be saved qne displaying the modal
      const saveChar = (char) => {
