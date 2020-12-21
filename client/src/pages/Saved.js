@@ -7,6 +7,7 @@ import SavedBooks from "../components/SavedBooks";
 // Saved page displaying the books that are in the database
 function Saved() {
     const [books, setBooks] = useState([]);
+    const [characters, setCharacters] = useState([])
  
   
     // delete books by id
