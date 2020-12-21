@@ -4,7 +4,7 @@ import React from "react";
 function Results(props) {
 
   const characters = props.data
-  console.log("characters search: ", characters);
+  // console.log("characters search: ", characters);
 
   return (
     <>

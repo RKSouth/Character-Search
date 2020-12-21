@@ -42,7 +42,7 @@ function Search() {
         let temps = [];
         temp.length = 0;
         //char
-        temp.length = 0;
+        temps.length = 0;
         let newBooks = await API.getBooks(searchState)
             .then((res) => {
                 return res.data.items;
@@ -71,10 +71,12 @@ function Search() {
         API.getCharacters()
         .then(res => {
             for (let i = 0; i < res.data.length; i++) {
-                temp.push(res.data[i].id);
+                temps.push(res.data[i].id);
             }
             console.log("savebook response: ", res)
         })
+        console.log("temps: ", temps);
+        setIds(temps);
     };
 
     // function that allows books to be saved qne displaying the modal
@@ -162,6 +164,7 @@ function Search() {
              <SearchBar
                 handleSearchChange={handleSearchChange}
                 searchBooks={searchBooks}
+                
                  />
                
 
