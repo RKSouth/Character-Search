@@ -161,7 +161,8 @@ function Search() {
           <div>
              <SearchBar
                 handleSearchChange={handleSearchChange}
-                searchBooks={searchBooks} />
+                searchBooks={searchBooks}
+                 />
                
 
                </div>
@@ -169,7 +170,9 @@ function Search() {
      
         </div>
             <Results
-                data={books}
+                // data={books}
+                data={characters}
+                saveCharacter={saveChar}
                 saveBook={saveBook}
                 modalClose={modalClose}
                 text={text}
