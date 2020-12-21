@@ -4,7 +4,7 @@ import React from "react";
 function Results(props) {
 
   const books = props.data
-  // console.log("books search: ", books);
+  console.log("books search: ", books);
 
   return (
     <>

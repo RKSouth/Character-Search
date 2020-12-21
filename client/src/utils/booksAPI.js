@@ -19,6 +19,9 @@ const API = {
     // add a book to the database when the user clicks save book
     addBook: function(data) {
         return axios.post("/api/books", data);
+    },   // add a book to the database when the user clicks save book
+    addCharacter: function(data) {
+        return axios.post("/api/books", data);
     },
     // delete the book by id when the user decides to remove from the saved page
     deleteBook: function(id) {

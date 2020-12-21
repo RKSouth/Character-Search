@@ -11,6 +11,7 @@ function Search() {
     // variables for the book the user is searching for
     const [searchState, setSearchState] = useState("");
     const [books, setBooks] = useState([]);
+    const [characters, setCharacters] = useState([])
  
 
     // variables for the modal that will pop up when the user clicks on the save book button
@@ -37,12 +38,24 @@ function Search() {
     // function that is grabbing the information from the google books API
     const searchBooks = async () => {
         let temp = [];
+        //char
+        let temps = [];
+        temp.length = 0;
+        //char
         temp.length = 0;
         let newBooks = await API.getBooks(searchState)
             .then((res) => {
                 return res.data.items;
             });
+        //char
+        let newChars = await API.getCharacters(searchState)
+            .then((res) => {
+                return res.data
+            })
+
         setBooks(newBooks);
+        //char
+        setCharacters(newChars);
         // grab saved books whenever a new search occurs
         API.getApiBooks()
             .then(res => {
@@ -54,7 +67,7 @@ function Search() {
         console.log("temp: ", temp);
         setIds(temp);
 
-//this copies the get books
+//this is a copy of the getApibooks but getting characters instead
         API.getCharacters()
         .then(res => {
             for (let i = 0; i < res.data.length; i++) {
@@ -69,7 +82,7 @@ function Search() {
         // console.log("savebook: ", book);
         var image;
         if (book.volumeInfo.imageLinks === undefined) {
-            image = "./googlebookslogo.png"
+            // image = "./googlebookslogo.png"
         } else {
             image = book.volumeInfo.imageLinks.thumbnail
         };
@@ -77,10 +90,8 @@ function Search() {
         // console.log("book id: ", book.id);
         if (!ids.includes(book.id)) {
             setIds([...ids, book.id]);
-            setModalClass("modal showModal");
             setText(book.volumeInfo.title + " was saved!");
         } else {
-            setModalClass("modal showModal");
             setText(book.volumeInfo.title + " is already saved!");
         };
 
@@ -104,7 +115,41 @@ function Search() {
         });
     };
 
- 
+     // function that allows books to be saved qne displaying the modal
+     const saveChar = (char) => {
+        console.log(char)
+        var image;
+        if (char.image === undefined) {
+            image = "Images-char/Wess.png"
+        } else {
+            image = char.image
+        };
+
+        console.log("char id: ", char.id);
+        if (!ids.includes(char.id)) {
+            setIds([...ids, char.id]);
+            setText(char.name + " was saved!");
+        } else {
+            setText(char.name + " is already saved!");
+        };
+
+        // setting an object with the data we grabbed from the axios call and passing in the data to be saved into the database
+        const data = {
+            name: char.name,
+            attack: char.attack,
+            image:char.image,
+            id: char.id
+        };
+
+        API.addCharacter(data).then(res => {
+            console.log("saved", res)
+
+
+        }).then(err => {
+            console.log("error", err);
+
+        });
+    };
 
 
     return (
