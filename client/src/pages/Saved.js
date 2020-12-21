@@ -32,7 +32,7 @@ function Saved() {
     useEffect(() => {
         API.getApiChars()
             .then(res => setCharacters(res.data))
-        console.log(characters)
+        // console.log(characters)
     }, [characters]);
 
     // re-render page when books is updated

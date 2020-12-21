@@ -5,6 +5,7 @@ import './App.css';
 import Jumbotron from "./components/Jumbotron/index";
 import Navbar from "./components/Navbar/index"; 
 import Results from "./components/Results"
+import Create from "./pages/Create"
 // setting up the routes to the different pages in the application
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/" exact component={Jumbotron} />
-        <Route path="/Search" component={Search} />
+        <Route path="/search" component={Search} />
       <Route path="/Saved" component={Saved} />
       <Route path="/Results" component={Results} />
+      <Route path="/Create" component={Create} />
       </Switch>
     </div>
   </Router>

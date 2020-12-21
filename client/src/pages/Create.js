@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Navbar from "../components/Navbar";
-import API from "../utils/booksAPI";
+import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
@@ -9,27 +9,27 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 
 function Create() {
     // Setting our component's initial state
-    const [books, setBooks] = useState([])
+    const [characters, setcharacters] = useState([])
     const [formObject, setFormObject] = useState({})
   
-    // Load all books and store them with setBooks
+    // Load all characters and store them with setcharacters
     useEffect(() => {
-      loadBooks()
+      loadcharacters()
     }, [])
   
-    // Loads all books and sets them to books
-    function loadBooks() {
-      API.getBooks()
+    // Loads all characters and sets them to characters
+    function loadcharacters() {
+      API.getCharacters()
         .then(res => 
-          setBooks(res.data)
+          setcharacters(res.data)
         )
         .catch(err => console.log(err));
     };
   
-    // Deletes a book from the database with a given id, then reloads books from the db
-    function deleteBook(id) {
-      API.deleteBook(id)
-        .then(res => loadBooks())
+    // Deletes a Character from the database with a given id, then reloads characters from the db
+    function deleteCharacter(id) {
+      API.deleteCharacter(id)
+        .then(res => loadcharacters())
         .catch(err => console.log(err));
     }
   
@@ -39,17 +39,17 @@ function Create() {
       setFormObject({...formObject, [name]: value})
     };
   
-    // When the form is submitted, use the API.saveBook method to save the book data
-    // Then reload books from the database
+    // When the form is submitted, use the API.saveCharacter method to save the Character data
+    // Then reload characters from the database
     function handleFormSubmit(event) {
       event.preventDefault();
       if (formObject.title && formObject.author) {
-        API.saveBook({
+        API.saveCharacter({
           title: formObject.title,
           author: formObject.author,
           synopsis: formObject.synopsis
         })
-          .then(res => loadBooks())
+          .then(res => loadcharacters())
           .catch(err => console.log(err));
       }
     };
@@ -60,7 +60,7 @@ function Create() {
           <Row>
             <Col size="md-6">
               <Jumbotron>
-                <h1>What Books Should I Read?</h1>
+                <h1>What characters Should I Read?</h1>
               </Jumbotron>
               <form>
                 <Input
@@ -82,24 +82,24 @@ function Create() {
                   disabled={!(formObject.author && formObject.title)}
                   onClick={handleFormSubmit}
                 >
-                  Submit Book
+                  Submit Character
                 </FormBtn>
               </form>
             </Col>
             <Col size="md-6 sm-12">
               <Jumbotron>
-                <h1>Books On My List</h1>
+                <h1>characters On My List</h1>
               </Jumbotron>
-              {books.length ? (
+              {characters.length ? (
                 <List>
-                  {books.map(book => (
-                    <ListItem key={book._id}>
-                      <Link to={"/books/" + book._id}>
+                  {characters.map(Character => (
+                    <ListItem key={Character._id}>
+                      <Link to={"/characters/" + Character._id}>
                         <strong>
-                          {book.title} by {book.author}
+                          {Character.title} by {Character.author}
                         </strong>
                       </Link>
-                      {/* <DeleteBtn onClick={() => deleteBook(book._id)} /> */}
+                      {/* <DeleteBtn onClick={() => deleteCharacter(Character._id)} /> */}
                     </ListItem>
                   ))}
                 </List>

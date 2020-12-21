@@ -10,7 +10,7 @@ export function SearchBar(props) {
    <div>
        <form className="form-inline my-2 my-lg-0" >
            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={props.handleSearchChange}/>
-               <button className="btn btn-outline-dark my-2 my-sm-0" type="submit"    onClick={props.searchBooks}>Search</button>
+               <button className="btn btn-outline-dark my-2 my-sm-0" type="submit" onClick={props.searchBooks}>Search</button>
                </form >
                <a className="nav-link" href="#Results">Results</a>
                </div>

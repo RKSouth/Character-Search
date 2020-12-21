@@ -110,7 +110,7 @@ function Search() {
     return (
       <div>
       <div
-      style={{ height: 650, clear: "both", paddingTop: 120, textAlign: "center", marginTop: 138 }}
+      style={{ height: 360, clear: "both", paddingTop: 120, textAlign: "center", marginTop: 138 }}
       className="jumbotron" id ="Search"
    >
           <div>
