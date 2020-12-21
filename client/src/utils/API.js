@@ -16,6 +16,9 @@ const API = {
   getBook: function(id) {
     return axios.get("/api/books/" + id);
   },
+  getCharacter: function(id) {
+    return axios.get("/api/characters/" + id);
+  },
     // add a book to the database when the user clicks save book
     addBook: function(data) {
         return axios.post("/api/books", data);
@@ -27,12 +30,15 @@ const API = {
     deleteBook: function(id) {
         return axios.delete("/api/books/" + id);
     },
+    deleteCharacters: function(id) {
+        return axios.delete("/api/characters/" + id);
+    },
     // find a book by id
     findBook: function(id) {
         return axios.get("/api/search");
     },
-    saveBook: function(bookData) {
-        return axios.post("/api/books/", bookData);
+    saveChar: function(characterData) {
+        return axios.post("/api/characters/", characterData);
       }
 };
 

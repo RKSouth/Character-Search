@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "../components/SearchBar"
 import Results from "../components/Results"
-import API from '../utils/booksAPI'
+import API from '../utils/API'
 
 
 
@@ -164,8 +164,7 @@ function Search() {
             <Results
                 // data={books}
                 data={characters}
-                saveCharacter={saveChar}
-                saveBook={saveBook}
+                saveChar={saveChar}
                 modalClose={modalClose}
                 text={text}
                 modalClass={modalClass}
