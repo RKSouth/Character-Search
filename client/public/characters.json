@@ -2,19 +2,19 @@
     {
         "id": 1,
         "name": "Batman",
-        "attack": "1",
+        "attack": ["Bat DANCE" , "Bat Mobile" , "Brooding and Smouldering", "Daddy Issues", "Ask Alfred"],
         "image": "./Images-char/batperson.png"
     },
     {
         "id": 2,
         "name": "House Plant",
-        "attack": "2",
+        "attack": ["Drop Leaves", "Leak Water", "Make Clones", "Shrivel" , "Growth Spurt"],
         "image": "./Images-char/houseplant.png"
     },
     {
         "id": 3,
         "name": "Barack Obama",
-        "attack": "3",
+        "attack": ["Dunks ON YOU", "Dad Jokes", "Tan Suit", "Swagger", "Ask Michelle"],
         "image": "./Images-char/obama.png"
     },
     {

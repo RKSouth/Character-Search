@@ -26,7 +26,8 @@ const API = {
     },
     saveChar: function(characterData) {
         return axios.post("/api/characters/", characterData);
-      }
+      },
+    
 };
 
 export default API;

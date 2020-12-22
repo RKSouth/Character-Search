@@ -4,17 +4,19 @@ import SearchBar from "../components/SearchBar"
 import Results from "../components/Results"
 import API from '../utils/API'
 import Jumbotron from "../components/Jumbotron";
+import Attacks from "../attacks.json"
 
 
 
-// Search page that allows the user to search for books
+// Search page that allows the user to search for characters
 function Search() {
-    // variables for the book the user is searching for
+    // variables for the character the user is searching for
     const [searchState, setSearchState] = useState("");
     const [characters, setCharacters] = useState([]);
 
 
-    // variables for the modal that will pop up when the user clicks on the save book button
+
+    // variables for the modal that will pop up when the user clicks on the save character button
     const [modalClass, setModalClass] = useState("modal hideModal");
     const [text, setText] = useState("Saved!");
     // saved book ids
@@ -49,13 +51,25 @@ function Search() {
             .then(res => {
                 for (let i = 0; i < res.data.length; i++) {
                     temp.push(res.data[i].id);
+                    console.log('current id: '+ res.data[i].id);
+                    console.log('current character id: ' + Attacks[i].CharacterId)
+               
+                    // var attack = [];
+                    // //if the data id matches the character id add the name to the list of attacks?
+                    // if (res.data[i].id === Attacks[i].CharacterId) {
+                    //  attack.push(Attacks[i].name);
+                    //  console.log(attack)
+                    //  console.log(Attacks[i].name)
+                    // } else {
+                    //     console.log(attack)
+                    // }
                 }
                 console.log("save character response: ", res.data.name)
             })
         console.log("temp: ", temp);
         setIds(temp);
     };
-
+console.log(Attacks)
     // function that allows books to be saved qne displaying the modal
     const saveChar = (char) => {
         console.log("savechar: ", char);
@@ -66,7 +80,7 @@ function Search() {
             img = char.image
         };
 
-        // console.log("book id: ", book.id);
+        // console.log("char id: ", char.id);
         if (!ids.includes(char.id)) {
             setIds([...ids, char.id]);
             setModalClass("modal showModal");
@@ -75,6 +89,13 @@ function Search() {
             setModalClass("modal showModal");
             setText(char.name + " is already saved!");
         };
+        var attack;
+       if (char.id === Attacks.CharacterId) {
+        attack.push(Attacks.name);
+        
+       } else {
+           console.log(attack)
+       }
 
         // setting an object with the data we grabbed from the axios call and passing in the data to be saved into the database
         const data = {

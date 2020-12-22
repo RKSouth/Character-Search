@@ -11,7 +11,7 @@ function Results(props) {
     {/* mapping through each book data and then displaying the info from the API and if there are no results, display the mo matching results container */}
       {characters !== undefined ? (
         characters.map((char, i) => {
-          console.log(char)
+          // console.log(char)
 
           return (
             <div key={char.id + i} className="container">
@@ -36,7 +36,13 @@ function Results(props) {
                   <div className="col-lg-8 mainContent">
                     <h2>{char.name}</h2>
                     {/* if there are more than x number of authors, join with an "&" */}
-               
+                      <ul><h3>Attacks:</h3>
+                        <li>{char.attack[0]}</li>
+                        <li>{char.attack[1]}</li>
+                        <li>{char.attack[2]}</li>
+                        <li>{char.attack[3]}</li>
+                        <li>{char.attack[4]}</li>
+                      </ul>
                    
                    
                     <button
