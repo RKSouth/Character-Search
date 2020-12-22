@@ -4,7 +4,7 @@ A simple full stack app that searches for characters and displays them.
 I wanted to rebuild my character app and expand on it using characters - slowly, I want to re-create my battle app but using cleaner code and more features. 
 
 <!-- need to put an image here -->
-
+![FrontPage](FrontPage.png)
 
 
 ## Table of Contents
@@ -43,6 +43,19 @@ In order to make a character search work in react- we need an axios call. Howeve
 __2. A Saved Search__
 
 __3. A Delete Button__
+
+__4. Things to Add/Change__
+
+* Make the Cards smaller
+
+* Make it so we can create a character
+
+* Include a list of attacks
+
+* Reconfigure the databases so that:
+ - The saved database is different from the main characters database
+ 
+
 
 <!-- ![savehandle](savehandler.png) -->
 
