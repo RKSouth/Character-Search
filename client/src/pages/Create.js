@@ -25,14 +25,7 @@ function Create() {
         )
         .catch(err => console.log(err));
     };
-  
-    // Deletes a Character from the database with a given id, then reloads characters from the db
-    function deleteCharacter(id) {
-      API.deleteCharacter(id)
-        .then(res => loadcharacters())
-        .catch(err => console.log(err));
-    }
-  
+    
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {
       const { name, value } = event.target;
@@ -66,15 +59,15 @@ function Create() {
                   name="name"
                   placeholder="name (required)"
                 />
-                <Input
+                {/* <Input
                   onChange={handleInputChange}
-                  name="author"
+                  name="attack"
                   placeholder="Author (required)"
-                />
+                /> */}
                 <TextArea
                   onChange={handleInputChange}
-                  name="synopsis"
-                  placeholder="Synopsis (Optional)"
+                  name="description"
+                  placeholder="Describe your Character (Optional)"
                 />
                 <FormBtn
                   disabled={!(formObject.author && formObject.name)}
