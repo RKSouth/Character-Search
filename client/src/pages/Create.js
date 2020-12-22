@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Jumbotron from "../components/Jumbotron";
+
 import Navbar from "../components/Navbar";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
@@ -43,9 +43,9 @@ function Create() {
     // Then reload characters from the database
     function handleFormSubmit(event) {
       event.preventDefault();
-      if (formObject.title && formObject.author) {
+      if (formObject.name && formObject.author) {
         API.saveCharacter({
-          title: formObject.title,
+          name: formObject.name,
           author: formObject.author,
           synopsis: formObject.synopsis
         })
@@ -59,14 +59,12 @@ function Create() {
             <Navbar/>
           <Row>
             <Col size="md-6">
-              <Jumbotron>
-                <h1>What characters Should I Read?</h1>
-              </Jumbotron>
+           
               <form>
                 <Input
                   onChange={handleInputChange}
-                  name="title"
-                  placeholder="Title (required)"
+                  name="name"
+                  placeholder="name (required)"
                 />
                 <Input
                   onChange={handleInputChange}
@@ -79,7 +77,7 @@ function Create() {
                   placeholder="Synopsis (Optional)"
                 />
                 <FormBtn
-                  disabled={!(formObject.author && formObject.title)}
+                  disabled={!(formObject.author && formObject.name)}
                   onClick={handleFormSubmit}
                 >
                   Submit Character
@@ -87,16 +85,16 @@ function Create() {
               </form>
             </Col>
             <Col size="md-6 sm-12">
-              <Jumbotron>
+            
                 <h1>characters On My List</h1>
-              </Jumbotron>
+           
               {characters.length ? (
                 <List>
                   {characters.map(Character => (
                     <ListItem key={Character._id}>
                       <Link to={"/characters/" + Character._id}>
                         <strong>
-                          {Character.title} by {Character.author}
+                          {Character.name} by {Character.attack}
                         </strong>
                       </Link>
                       {/* <DeleteBtn onClick={() => deleteCharacter(Character._id)} /> */}

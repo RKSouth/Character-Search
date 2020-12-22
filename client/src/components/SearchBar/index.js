@@ -7,7 +7,7 @@ export function SearchBar(props) {
       <div className="card">
         <input type="text" className="bar form-control text-center" placeholder="What are you looking for?" onChange={props.handleSearchChange} />
       </div>
-      <button className="btn btn-primary mt-4" id="searchBtn" onClick={props.searchCharacters}>Search Books</button>
+      <button className="btn btn-light mt-4" id="searchBtn" onClick={props.searchCharacters}>Search Characters</button>
     </div>
   );
 };
