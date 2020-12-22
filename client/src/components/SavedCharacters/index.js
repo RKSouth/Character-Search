@@ -16,6 +16,13 @@ function SavedCharacters({ characters, deleteCharacters }) {
               </div>
               <div className="col-lg-8 savedContent">
                 <h2>{char.name}</h2>
+                <ul><h4>Attacks:</h4>
+                        <li>{char.attack[0]}</li>
+                        <li>{char.attack[1]}</li>
+                        <li>{char.attack[2]}</li>
+                        <li>{char.attack[3]}</li>
+                        <li>{char.attack[4]}</li>
+                      </ul>
                 
                 <button onClick={() => deleteCharacters(char._id)} className="btn btn-outline-light my-2 my-sm-0">Remove</button> 
               </div>

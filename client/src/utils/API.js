@@ -4,7 +4,6 @@ const API = {
     getCharacters: function() {
         return axios.get('/characters.json')
     },
-
     // grab the characters from the database that was saved by the user
     getApiChars: function() {
         return axios.get("/api/characters");
@@ -13,7 +12,7 @@ const API = {
      getCharacter: function(id) {
     return axios.get("/api/characters/" + id);
     },
-    // add a book to the database when the user clicks save book
+    // add a character to the database when the user clicks save character
     addCharacter: function(data) {
         return axios.post("/api/characters", data);
     },

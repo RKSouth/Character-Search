@@ -36,7 +36,7 @@ function Results(props) {
                   <div className="col-lg-8 mainContent">
                     <h2>{char.name}</h2>
                     {/* if there are more than x number of authors, join with an "&" */}
-                      <ul><h3>Attacks:</h3>
+                      <ul><h4>Attacks:</h4>
                         <li>{char.attack[0]}</li>
                         <li>{char.attack[1]}</li>
                         <li>{char.attack[2]}</li>
@@ -44,9 +44,9 @@ function Results(props) {
                         <li>{char.attack[4]}</li>
                       </ul>
                    
-                   
+                   <p>{char.text}</p>
                     <button
-                      className="ml-3 btn btn-primary"
+                      className="ml-3 btn btn-light"
                       onClick={() => {
                         props.saveChar(char);
                       }}

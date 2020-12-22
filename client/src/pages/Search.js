@@ -4,7 +4,7 @@ import SearchBar from "../components/SearchBar"
 import Results from "../components/Results"
 import API from '../utils/API'
 import Jumbotron from "../components/Jumbotron";
-import Attacks from "../attacks.json"
+
 
 
 
@@ -13,13 +13,10 @@ function Search() {
     // variables for the character the user is searching for
     const [searchState, setSearchState] = useState("");
     const [characters, setCharacters] = useState([]);
-
-
-
     // variables for the modal that will pop up when the user clicks on the save character button
     const [modalClass, setModalClass] = useState("modal hideModal");
     const [text, setText] = useState("Saved!");
-    // saved book ids
+    // saved char ids
     const [ids, setIds] = useState([]);
 
     // for the modal display to hide or show
@@ -37,39 +34,30 @@ function Search() {
         // console.log(searchState)
     };
 
-    // function that is grabbing the information from the google books API
+    // function that is grabbing the information from the json file - will need to be switched over
     const searchCharacters = async () => {
         let temp = [];
         temp.length = 0;
-        let newCharacters = await API.getCharacters(searchState)
+        let newCharacters = await API.getCharacters()
             .then((res) => {
                 return res.data;
             });
         setCharacters(newCharacters);
-        // grab saved books whenever a new search occurs
-        API.getCharacters()
+        // grab saved characters whenever a new search occurs
+        API.getCharacter()
             .then(res => {
                 for (let i = 0; i < res.data.length; i++) {
                     temp.push(res.data[i].id);
                     console.log('current id: '+ res.data[i].id);
-                    console.log('current character id: ' + Attacks[i].CharacterId)
-               
-                    // var attack = [];
-                    // //if the data id matches the character id add the name to the list of attacks?
-                    // if (res.data[i].id === Attacks[i].CharacterId) {
-                    //  attack.push(Attacks[i].name);
-                    //  console.log(attack)
-                    //  console.log(Attacks[i].name)
-                    // } else {
-                    //     console.log(attack)
-                    // }
+         
+                  
                 }
                 console.log("save character response: ", res.data.name)
             })
         console.log("temp: ", temp);
         setIds(temp);
     };
-console.log(Attacks)
+
     // function that allows books to be saved qne displaying the modal
     const saveChar = (char) => {
         console.log("savechar: ", char);
@@ -78,24 +66,24 @@ console.log(Attacks)
             img = "./Images-char/Wess.png"
         } else {
             img = char.image
+            console.log ("image ok")
         };
 
-        // console.log("char id: ", char.id);
+        console.log("char id: ", char.id);
+        //if the list of ids does not include the current id (selected) then save else
+        console.log(ids);
+       
         if (!ids.includes(char.id)) {
             setIds([...ids, char.id]);
             setModalClass("modal showModal");
             setText(char.name + " was saved!");
+            console.log(char.id + "ok")
         } else {
             setModalClass("modal showModal");
             setText(char.name + " is already saved!");
+            console.log(char.id + " is not ok")
         };
-        var attack;
-       if (char.id === Attacks.CharacterId) {
-        attack.push(Attacks.name);
-        
-       } else {
-           console.log(attack)
-       }
+   
 
         // setting an object with the data we grabbed from the axios call and passing in the data to be saved into the database
         const data = {
@@ -104,13 +92,12 @@ console.log(Attacks)
             image: img,
             id: char.id
         };
-
+        console.log(data)
         API.addCharacter(data).then(res => {
             console.log("saved", res)
-
-
         }).then(err => {
             console.log("error", err);
+            console.log ("oops something didn't work")
 
         });
     };
