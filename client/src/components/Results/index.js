@@ -4,25 +4,22 @@ import React from "react";
 function Results(props) {
 
   const characters = props.data
-  // console.log("characters search: ", characters);
+  // console.log("books search: ", books);
 
   return (
     <>
-    {/* mapping through each char data and then displaying the info from the API and if there are no results, display the mo matching results container */}
+    {/* mapping through each book data and then displaying the info from the API and if there are no results, display the mo matching results container */}
       {characters !== undefined ? (
         characters.map((char, i) => {
-          // console.log(char.volumeInfo.authors.length)
+          console.log(char)
 
           return (
-            <div key={char.id + i} className="container" id="Results">
-              <div className="card-results">
-              <h3>Your Search Results</h3>
-                
-
+            <div key={char.id + i} className="container">
+              <div className="card result">
                 <div className="row mb-4 mt-3">
-                  <div className="col-lg-4 charImg">
-                    {/* if there are no images of the characters, set a defauly logo */}
-                    {char.image ? (
+                  <div className="col-lg-4 bookImg">
+                    {/* if there are no images of the books, set a defauly logo */}
+                    {char.image? (
                       <img
                         className="img-fluid"
                         src={char.image}
@@ -30,7 +27,7 @@ function Results(props) {
                       />
                     ) : (
                       <img
-                        src="./googlecharacterslogo.png"
+                        src="./Images-char/Wess.png"
                         alt="title"
                         className="img-fluid logo2"
                       />
@@ -39,16 +36,16 @@ function Results(props) {
                   <div className="col-lg-8 mainContent">
                     <h2>{char.name}</h2>
                     {/* if there are more than x number of authors, join with an "&" */}
-            
-                
+               
+                   
                    
                     <button
-                      className="btn btn-outline-light my-2 my-sm-0" 
+                      className="ml-3 btn btn-primary"
                       onClick={() => {
                         props.saveChar(char);
                       }}
                     >
-                      Save char
+                      Save Character
                     </button>
                   </div>
                 </div>
@@ -65,7 +62,7 @@ function Results(props) {
           </div>
         </div>
       )}
-
+      {/* modal start */}
       <div className={props.modalClass}>
         <div>
           <div >
@@ -85,7 +82,7 @@ function Results(props) {
               <button
                 onClick={() => props.modalClose()}
                 type="button"
-                className="btn btn-outline-light my-2 my-sm-0" 
+                className="btn btn-secondary"
 
               >
                 Close

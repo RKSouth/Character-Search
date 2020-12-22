@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import Navbar from "../components/Navbar"
 import SearchBar from "../components/SearchBar"
 import Results from "../components/Results"
 import API from '../utils/API'
-
+import Jumbotron from "../components/Jumbotron";
 
 
 
@@ -10,9 +11,8 @@ import API from '../utils/API'
 function Search() {
     // variables for the book the user is searching for
     const [searchState, setSearchState] = useState("");
- 
-    const [characters, setCharacters] = useState([])
- 
+    const [characters, setCharacters] = useState([]);
+
 
     // variables for the modal that will pop up when the user clicks on the save book button
     const [modalClass, setModalClass] = useState("modal hideModal");
@@ -36,55 +36,43 @@ function Search() {
     };
 
     // function that is grabbing the information from the google books API
-    const searchBooks = async () => {
-      
-        //char
-        let temps = [];
-     
-        //char
-        temps.length = 0;
- ;
-        //char
-        let newChars = await API.getCharacters(searchState)
+    const searchCharacters = async () => {
+        let temp = [];
+        temp.length = 0;
+        let newCharacters = await API.getCharacters(searchState)
             .then((res) => {
-                return res.data
-            })
-
-        
-        //char
-        setCharacters(newChars);
+                return res.data;
+            });
+        setCharacters(newCharacters);
         // grab saved books whenever a new search occurs
-       
-
-//this is a copy of the getApibooks but getting characters instead
         API.getCharacters()
-        .then(res => {
-            for (let i = 0; i < res.data.length; i++) {
-                temps.push(res.data[i].id);
-            }
-            console.log("savebook response: ", res)
-        })
-        console.log("temps: ", temps);
-        setIds(temps);
+            .then(res => {
+                for (let i = 0; i < res.data.length; i++) {
+                    temp.push(res.data[i].id);
+                }
+                console.log("save character response: ", res.data.name)
+            })
+        console.log("temp: ", temp);
+        setIds(temp);
     };
 
-
-
-     // function that allows books to be saved qne displaying the modal
-     const saveChar = (char) => {
-        console.log(char)
-        var image;
+    // function that allows books to be saved qne displaying the modal
+    const saveChar = (char) => {
+        console.log("savechar: ", char);
+        var img;
         if (char.image === undefined) {
-            image = "Images-char/Wess.png"
+            img = "./Images-char/Wess.png"
         } else {
-            image = char.image
+            img = char.image
         };
 
-        console.log("char id: ", char.id);
+        // console.log("book id: ", book.id);
         if (!ids.includes(char.id)) {
             setIds([...ids, char.id]);
+            setModalClass("modal showModal");
             setText(char.name + " was saved!");
         } else {
+            setModalClass("modal showModal");
             setText(char.name + " is already saved!");
         };
 
@@ -92,7 +80,7 @@ function Search() {
         const data = {
             name: char.name,
             attack: char.attack,
-            image:char.image,
+            image: img,
             id: char.id
         };
 
@@ -106,34 +94,25 @@ function Search() {
         });
     };
 
+ 
+
 
     return (
-      <div>
-      <div
-      style={{ height: 360, clear: "both", paddingTop: 120, textAlign: "center", marginTop: 138 }}
-      className="jumbotron" id ="Search"
-   >
-          <div>
-             <SearchBar
-                handleSearchChange={handleSearchChange}
-                searchBooks={searchBooks}
-                
-                 />
-               
-
-               </div>
-        
+        <div className="mb-5">
+            <Navbar />
+            <Jumbotron />
      
-        </div>
+            <SearchBar
+                handleSearchChange={handleSearchChange}
+                searchCharacters={searchCharacters} />
+               
             <Results
-                // data={books}
                 data={characters}
                 saveChar={saveChar}
                 modalClose={modalClose}
                 text={text}
                 modalClass={modalClass}
             />
-     
         </div>
     );
 };
