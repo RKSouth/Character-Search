@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 const API = {
-    getCharacters: function() {
-        return axios.get('/characters.json')
+    getCharacters: function(searching) {
+        console.log(searching);
+        return axios.get('/api/characters', searching)
     },
     // grab the characters from the database that was saved by the user
-    getApiChars: function(searching) {
-        console.log(searching)
-        return axios.get("/api/characters/", searching);
+    getApiChars: function() {
+        return axios.get("/api/characters");
     },
     // grab the characters from the database that was saved by the user
      getCharacter: function(id) {

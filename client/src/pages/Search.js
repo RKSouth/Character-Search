@@ -38,23 +38,25 @@ function Search() {
     const searchCharacters = async () => {
         let temp = [];
         temp.length = 0;
-        let newCharacters = await API.getApiChars(searchState)
+      
+        let newCharacters = await API.getCharacter(searchState)
             .then((res) => {
+                console.log(res.data)
                 return res.data;
                 
             });
             console.log(newCharacters);
         setCharacters(newCharacters);
         // grab saved characters whenever a new search occurs
-        API.getCharacter()
+        API.getCharacters()
             .then(res => {
                 for (let i = 0; i < res.data.length; i++) {
                     temp.push(res.data[i].id);
-                    console.log('current id: '+ res.data[i].id);
+                    console.log('current id: '+ res.data[i].name);
          
                   
                 }
-                console.log("save character response: ", res.data.name)
+                console.log("save character response: ", res.data)
             })
         console.log("temp: ", temp);
         setIds(temp);
