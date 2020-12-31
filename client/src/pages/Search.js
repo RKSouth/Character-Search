@@ -31,17 +31,19 @@ function Search() {
     const handleSearchChange = (e) => {
         const { value } = e.target
         setSearchState(value)
-        // console.log(searchState)
+        console.log(searchState)
     };
 
     // function that is grabbing the information from the json file - will need to be switched over
     const searchCharacters = async () => {
         let temp = [];
         temp.length = 0;
-        let newCharacters = await API.getCharacters()
+        let newCharacters = await API.getApiChars(searchState)
             .then((res) => {
                 return res.data;
+                
             });
+            console.log(newCharacters);
         setCharacters(newCharacters);
         // grab saved characters whenever a new search occurs
         API.getCharacter()

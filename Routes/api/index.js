@@ -1,4 +1,3 @@
-
 // requiring router and our character routes. 
 const router = require("express").Router();
 const characterRoutes = require("./characters");

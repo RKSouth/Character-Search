@@ -14,11 +14,11 @@ function Create() {
   
     // Load all characters and store them with setcharacters
     useEffect(() => {
-      loadcharacters()
+      findCharacters()
     }, [])
   
     // Loads all characters and sets them to characters
-    function loadcharacters() {
+    function findCharacters() {
       API.getCharacters()
         .then(res => 
           setcharacters(res.data)
@@ -43,7 +43,7 @@ function Create() {
           name: formObject.name,
           attack: formObject.attack
         })
-          .then(res => API.getApiChars())
+          .then(res => API.findCharacters())
           .catch(err => console.log(err));
       }
     };

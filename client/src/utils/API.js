@@ -5,8 +5,9 @@ const API = {
         return axios.get('/characters.json')
     },
     // grab the characters from the database that was saved by the user
-    getApiChars: function() {
-        return axios.get("/api/characters");
+    getApiChars: function(searching) {
+        console.log(searching)
+        return axios.get("/api/characters/", searching);
     },
     // grab the characters from the database that was saved by the user
      getCharacter: function(id) {

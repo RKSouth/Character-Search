@@ -1,7 +1,7 @@
 /*requiring router and our controllers to connect the two and call on
 The functions made by the controller. */
 const router = require("express").Router();
-const charactersController = require("../../controllers/controller");
+const charactersController = require("../../controllers/charactersController");
 
 // setting routes for the get and post functions
 //  using the functions "findAll" and "create" from the controller.

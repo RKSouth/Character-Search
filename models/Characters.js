@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const characterSchema = new Schema({
   name: { type: String, required: false},
   image: {type: String, required: false},
+  date: { type: Date, default: Date.now },
   attack: {type: Array, required: false},
   id: {type: String, required: true, unique: true}
 });
