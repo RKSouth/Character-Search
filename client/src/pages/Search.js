@@ -11,7 +11,7 @@ import Jumbotron from "../components/Jumbotron";
 // Search page that allows the user to search for characters
 function Search() {
     // variables for the character the user is searching for
-    const [searchState, setSearchState] = useState("");
+    const [searchState, setSearchState] = useState({});
     const [characters, setCharacters] = useState([]);
     // variables for the modal that will pop up when the user clicks on the save character button
     const [modalClass, setModalClass] = useState("modal hideModal");
