@@ -36,13 +36,14 @@ function Create() {
     // Then reload characters from the database
     function handleFormSubmit(event) {
       event.preventDefault();
-      if (formObject.name && formObject.author) {
-        API.saveCharacter({
+      console.log(formObject.attack)
+      if (formObject.name && formObject.attack) {
+        console.log(formObject.attack)
+        API.addCharacter({
           name: formObject.name,
-          author: formObject.author,
-          synopsis: formObject.synopsis
+          attack: formObject.attack
         })
-          .then(res => loadcharacters())
+          .then(res => API.getApiChars())
           .catch(err => console.log(err));
       }
     };
@@ -59,18 +60,38 @@ function Create() {
                   name="name"
                   placeholder="name (required)"
                 />
-                {/* <Input
+                <Input
                   onChange={handleInputChange}
                   name="attack"
-                  placeholder="Author (required)"
+                  placeholder="Attack 1 (required)"
+                />
+                    {/* <Input
+                  onChange={handleInputChange}
+                  name="attack"
+                  placeholder="Attack 2 (required)"
+                />
+                    <Input
+                  onChange={handleInputChange}
+                  name="attack"
+                  placeholder="Attack 3 (required)"
+                />
+                    <Input
+                  onChange={handleInputChange}
+                  name="attack"
+                  placeholder="Attack 4 (required)"
+                />
+                    <Input
+                  onChange={handleInputChange}
+                  name="attack"
+                  placeholder="Attack 5 (required)"
                 /> */}
-                <TextArea
+                {/* <TextArea
                   onChange={handleInputChange}
                   name="description"
                   placeholder="Describe your Character (Optional)"
-                />
+                /> */}
                 <FormBtn
-                  disabled={!(formObject.author && formObject.name)}
+                  disabled={!(formObject.attack && formObject.name)}
                   onClick={handleFormSubmit}
                 >
                   Submit Character
@@ -87,7 +108,7 @@ function Create() {
                     <ListItem key={Character._id}>
                       <Link to={"/characters/" + Character._id}>
                         <strong>
-                          {Character.name} by {Character.attack}
+                          {Character.name}  
                         </strong>
                       </Link>
                       {/* <DeleteBtn onClick={() => deleteCharacter(Character._id)} /> */}
