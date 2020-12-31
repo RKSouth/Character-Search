@@ -106,14 +106,15 @@ function Search() {
 
 
     return (
-        <div className="mb-5">
+        <div>
             <Navbar />
             <Jumbotron />
      
             <SearchBar
                 handleSearchChange={handleSearchChange}
                 searchCharacters={searchCharacters} />
-               
+                  <div className="container">
+          <div className="text-center row" >
             <Results
                 data={characters}
                 saveChar={saveChar}
@@ -121,6 +122,9 @@ function Search() {
                 text={text}
                 modalClass={modalClass}
             />
+            </div>
+          {/* <Footer /> */}
+        </div>
         </div>
     );
 };

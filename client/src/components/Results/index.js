@@ -14,11 +14,9 @@ function Results(props) {
           // console.log(char)
 
           return (
-            <div key={char.id + i} className="container">
-              <div className="card result">
-                <div className="row mb-4 mt-3">
-                  <div className="col-lg-4 bookImg">
-                    {/* if there are no images of the books, set a defauly logo */}
+            <div key={char.id + i} >
+            
+              <div className="card">
                     {char.image? (
                       <img
                         className="img-fluid"
@@ -32,8 +30,7 @@ function Results(props) {
                         className="img-fluid logo2"
                       />
                     )}
-                  </div>
-                  <div className="col-lg-8 mainContent">
+        
                     <h2>{char.name}</h2>
                     {/* if there are more than x number of authors, join with an "&" */}
                       <ul><h4>Attacks:</h4>
@@ -55,8 +52,7 @@ function Results(props) {
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
+          
           );
         })
       ) : (
