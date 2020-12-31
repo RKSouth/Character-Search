@@ -15,7 +15,6 @@ function Results(props) {
 
           return (
             <div key={char.id + i} >
-            
               <div className="card">
                     {char.image? (
                       <img

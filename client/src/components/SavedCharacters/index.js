@@ -7,7 +7,7 @@ function SavedCharacters({ characters, deleteCharacters }) {
     // mapping through each book from the database and displaying each book"
     characters.map(char => {
       return (
-        <div key={char.id} className="container">
+       
           <div className="card">
             <div className="row mb-4 mt-3">
               <div className="col-lg-4 bookImg">
@@ -28,7 +28,7 @@ function SavedCharacters({ characters, deleteCharacters }) {
               </div>
             </div>
           </div>
-        </div>
+     
       );
     })
   );

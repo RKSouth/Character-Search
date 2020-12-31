@@ -42,15 +42,17 @@ function Saved() {
  
 
     return (
-        <div className="mb-5">
+        <div>
             <React.Fragment>
                 <Navbar />
                 <Jumbotron />
-     
+                <div className="container">
+          <div className="text-center row" >
                 <SavedCharacters
                     characters={characters}
                     deleteCharacters={deleteCharacters} style={{ height: 650, clear: "both", paddingTop: 120, textAlign: "center", marginTop: 108 }}/>
-               
+                 </div>
+        </div>
             </React.Fragment>
         </div>
     );
