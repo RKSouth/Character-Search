@@ -1,6 +1,13 @@
 import axios from 'axios';
 
 const API = {
+//need two db's 
+//one for all characters (allchar) 
+//-where newly created characters are saved and pulled
+//another for saved characters from a user database
+//maybe need a user database that holds user info + saved character info
+//will need passport for this
+
     getCharacters: function(searching) {
         console.log(searching);
         return axios.get('/api/characters', searching)
