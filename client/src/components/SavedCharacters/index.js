@@ -10,8 +10,8 @@ function SavedCharacters({ characters, deleteCharacters }) {
        
           <div className="card">
             <div className="row mb-4 mt-3">
-              <div className="col-lg-4 bookImg">
-                {char.image ? <img src={char.image} alt="title" className="img-fluid" />
+              <div className="col-lg-4">
+                {char.image ? <img src={char.image} alt= {char.name} className="img-fluid" />
                   : <img src="https://via.placeholder.com/140x100" alt="title" className="img-fluid" />}
               </div>
               <div className="col-lg-8 savedContent">

@@ -15,22 +15,14 @@ function Results(props) {
 
           return (
             <div key={char.id + i} >
-              <div className="card">
-                    {char.image? (
-                      <img
-                        className="img-fluid"
-                        src={char.image}
-                        alt={char.name}
-                      />
-                    ) : (
-                      <img
-                        src="./Images-char/Wess.png"
-                        alt="title"
-                        className="img-fluid logo2"
-                      />
-                    )}
-        
-                    <h2>{char.name}</h2>
+          <div className="card">
+            <div className="row mb-4 mt-3">
+              <div className="col-lg-4">
+                {char.image ? <img src={char.image} alt= {char.name} className="img-fluid" />
+                  : <img src="https://via.placeholder.com/140x100" alt="title" className="img-fluid" />}
+              </div>
+              <div className="col-lg-8 savedContent">
+                <h2>{char.name}</h2>
                     {/* if there are more than x number of authors, join with an "&" */}
                       <ul><h4>Attacks:</h4>
                         <li>{char.attack[0]}</li>
@@ -51,7 +43,8 @@ function Results(props) {
                     </button>
                   </div>
                 </div>
-          
+                </div>
+                </div>
           );
         })
       ) : (

@@ -4,9 +4,8 @@ import React from "react";
 export function SearchBar(props) {
   return (
     <div className="container mb-5">
-      <div className="card">
-        <input type="text" className="bar form-control text-center" placeholder="What are you looking for?" onChange={props.handleSearchChange} />
-      </div>
+        <input type="text" className="bar form-control text-center" 
+        placeholder="What are you looking for?" onChange={props.handleSearchChange} />
       <button className="btn btn-light mt-4" id="searchBtn" onClick={props.searchCharacters}>Search Characters</button>
     </div>
   );
