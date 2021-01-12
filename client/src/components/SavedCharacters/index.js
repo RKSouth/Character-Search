@@ -9,13 +9,12 @@ function SavedCharacters({ characters, deleteCharacters }) {
       return (
        
           <div className="card">
-            <div className="row mb-4 mt-3">
-              <div className="col-lg-3">
-                {char.image ? <img src={char.image} alt= {char.name} className="img-fluid" />
+            <div className="row mb-4 mt-3">     
+              <div className="col-lg-8-sm-2 savedContent">
+              <h2>{char.name}</h2>
+              {char.image ? <img src={char.image} alt= {char.name} className="img-fluid" />
                   : <img src="https://via.placeholder.com/140x100" alt="title" className="img-fluid" />}
-              </div>
-              <div className="col-lg-8 savedContent">
-                <h2>{char.name}</h2>
+       
                 <ul><h4>Attacks:</h4>
                         <li>{char.attack[0]}</li>
                         <li>{char.attack[1]}</li>
