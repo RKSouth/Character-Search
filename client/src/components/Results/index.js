@@ -17,7 +17,7 @@ function Results(props) {
             <div key={char.id + i} >
           <div className="card">
             <div className="row mb-4 mt-3">
-              <div className="col-lg-4">
+              <div className="col-lg-3">
                 {char.image ? <img src={char.image} alt= {char.name} className="img-fluid" />
                   : <img src="https://via.placeholder.com/140x100" alt="title" className="img-fluid" />}
               </div>

@@ -26,9 +26,16 @@ h1 {
   background-color: rgb(66, 54, 45);
   opacity: 0.89;
   color: whitesmoke;
+  border-radius: 2px;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+  width: 325px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
 }
 
-.card-results {
+/* .card-results {
   background-color: rgb(66, 54, 45);
   opacity: 0.92;
   color: whitesmoke;
@@ -38,7 +45,7 @@ h1 {
   text-align: "center"; 
   margin-top: 600;
   margin: 3%;
-}
+} */
 
 
 .App-header {
@@ -73,33 +80,17 @@ min-width: 300px;
 }
 
 button {
-
-margin-left: 43%;
+/* 
+margin-left: -23%; */
 opacity: 0.8;
 }
 
 img {
-  max-width: 100px;
-  max-height: 100px;
   justify-content: space-around;
-}
-
-.card {
-
-  border-radius: 2px;
-  height: 300px;
-  margin: 1rem;
-  position: relative;
-  width: 325px;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  text-align: left;
-}
-img {
-  max-height: 120px;
-  max-width: 120px;
-  min-height: 120px;
-  min-width: 120px;
   margin: 3%;
+  margin-right: 10px;
+  margin-left: 10px;
+  max-height: 60px;
 }
 
 
@@ -119,10 +110,10 @@ img {
 
 .card > .remove {
   color: #ff1744;
-  font-size: 48px;
+  font-size: 38px;
   position: absolute;
   top: -20px;
-  right: 5px;
+  right: 50px;
   cursor: pointer;
 }
 

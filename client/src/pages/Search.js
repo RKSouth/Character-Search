@@ -33,6 +33,7 @@ function Search() {
         setSearchState(value)
         console.log(searchState)
     };
+   
 
     // function that is grabbing the information from the json file - will need to be switched over
     const searchCharacters = async () => {
